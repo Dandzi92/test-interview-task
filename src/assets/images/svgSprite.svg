@@ -1,0 +1,23 @@
+<svg width="0" height="0" class="hidden">
+<symbol xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="100 30 23 23" id="Logo">
+    <image xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABcAAAAXCAYAAADgKtSgAAACJUlEQVRIS62VzYuNYRjGf9dOLAwLUnZmZSNFjUg+S2bJwk4KCzKFfEzTZD40PhYssMKfQEmYha+ShOQjit2UhRQLiaVL9+k5es4573PmHc29O+e5n+u+3uu9rvsVs1y2jwKbgHHNJrbtEeBUwpz8B257vqQf/zusDThg9jTAbR8EhoFXwG3gHfCh7jDb54FjGbEjki4qAV+uYPwGeAm8Bh5K+lT1VLbHErHm8ZCkifgR4NuB0Gp1F0m+A1PAM2ASeA78TGzHs3ujkgKrUbnmu4F9wNoaun8DPgLrst4JSUP53Q632I4hx4HlNYY0W85JOtneX2lF2wvjbQPh2SXTDHksaWNVT1ef2+4BDgH7gaWFIe+BPkm/ajFvb7K9DHgKLC4MCPB4yS1VK6G2zwADwNwC+ICkSzMGt30WOJFd/FrxBDck7ZwRuO0Iw2B2KVJ4KwVrXvb/F6BX0u9KK9peBYQNIyxvgc1Abq8xSY2lZPsqsLeN6XpJTzrAbfcBj4A5BU1bAmK7NxHI38GwpNNV4CsSy10V4NcltbMM9leAA1n/XUn9xYTajujHIopl36wdkm4W7BnyNbX/DKyUFHuoUaWE3gO2pZ5BSeGYjrJ9ATicHWyVdH868NiQL1LTNUmx0KrAI7Wx+xekwxFJo13BkyMeABuAfkmxZisrBazpqhbdiwm1vQbokRQSFcv2IiCC9QfYIilcV9a8G1hBnvhMTkm6k5//BeODvV6axXK/AAAAAElFTkSuQmCC"
+      width="23" height="23" x="100" y="30"></image>
+  </symbol>
+  <symbol xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlnsSvgjs="http://svgjs.com/svgjs" viewBox="1075 31 25 18" id="MenuToggler">
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlnsSvgjs="http://svgjs.com/svgjs" viewBox="0 0.438 25 3.125" fill="#fff" x="1075" y="31">
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="1 1 24 3">
+        <path paint-order="stroke fill markers" fill-rule="evenodd" d="M1 1h24v3H1V1z"></path>
+      </svg>
+    </svg>
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlnsSvgjs="http://svgjs.com/svgjs" viewBox="0 0.438 25 3.125" fill="#fff" x="1075" y="38">
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="1 1 24 3">
+        <path paint-order="stroke fill markers" fill-rule="evenodd" d="M1 1h24v3H1V1z"></path>
+      </svg>
+    </svg>
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlnsSvgjs="http://svgjs.com/svgjs" viewBox="0 0.438 25 3.125" fill="#fff" x="1075" y="45">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="1 1 24 3">
+        <path paint-order="stroke fill markers" fill-rule="evenodd" d="M1 1h24v3H1V1z"></path>
+      </svg>
+    </svg>
+  </symbol>
+</svg>

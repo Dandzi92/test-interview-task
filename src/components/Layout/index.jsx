@@ -1,12 +1,11 @@
 import React from 'react';
-import './styles.scss';
-
 import Header from '../Header';
 import Footer from '../Footer';
+import styles from './styles.scss';
 
 const Layout = ({ children }) => {
   return (
-    <div className="site-wrapper">
+    <div className={styles.wrapper}>
       <Header />
       {children}
       <Footer />

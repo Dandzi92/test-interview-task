@@ -1,0 +1,23 @@
+.header {
+  background-color: green;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 150px;
+  flex-basis: 100%;
+}
+
+.title {
+  font-size: 32px;
+  letter-spacing: 1px;
+  color: #f4f3ee;
+  font-family: Open-Sans, serif;
+  font-weight: 300;
+}
