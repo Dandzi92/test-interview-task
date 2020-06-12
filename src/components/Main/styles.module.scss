@@ -5,6 +5,18 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: relative;
+  padding: 150px 35px;
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 5;
+  }
 }
 
 .title {
@@ -17,4 +29,6 @@
   color: #ffffff;
   font-family: 'Open Sans';
   font-weight: 300;
+  position: relative;
+  z-index: 6;
 }

@@ -6,7 +6,9 @@ const Destinations = () => {
   return (
     <div className={styles.container}>
       <h4 className={styles.title}>top destinations</h4>
-      <div>Some of the top destinations for your next summer adventure</div>
+      <div className={styles.description}>
+        Some of the top destinations for your next summer adventure
+      </div>
       <Slider />
     </div>
   );

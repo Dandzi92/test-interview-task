@@ -1,9 +1,14 @@
 import React from 'react';
 import styles from './styles.module.scss';
+import classnames from 'classnames';
 
-const Menu = () => {
+const Menu = ({ isHeader }) => {
   return (
-    <ul className={styles.menu}>
+    <ul
+      className={classnames(styles.menu, {
+        [styles['header-li']]: isHeader,
+      })}
+    >
       <li>home</li>
       <li>about</li>
       <li>press</li>

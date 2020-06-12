@@ -9,6 +9,9 @@
   justify-content: center;
   max-width: 240px;
   flex-basis: 100%;
+  min-height: 241px;
+  background: #ffffff;
+  box-shadow: 10px 10px 27px -12px rgba(0, 0, 0, 0.75);
 }
 
 .details {
@@ -16,4 +19,22 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding: 15px;
+}
+
+.title {
+  font-size: 14px;
+  color: #323232;
+  font-family: 'Montserrat';
+  font-weight: 400;
+  margin: 20px 0 10px 0;
+  align-self: flex-start;
+}
+
+.description {
+  font-size: 13px;
+  line-height: 19px;
+  color: #696969;
+  font-family: 'Open-Sans';
+  font-weight: 400;
 }

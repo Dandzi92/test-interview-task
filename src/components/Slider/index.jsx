@@ -3,7 +3,7 @@ import styles from './styles.module.scss';
 import SliderItem from './SliderItem';
 
 const Slider = () => {
-  const arr = [0, 1, 2];
+  const arr = [0, 1, 2, 3];
   return (
     <div className={styles.slider}>
       {arr.map((item, i) => (

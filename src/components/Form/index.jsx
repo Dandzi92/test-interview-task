@@ -4,11 +4,11 @@ import styles from './styles.module.scss';
 const Form = () => {
   return (
     <form className={styles.form} action="#" method="post">
-      <div className={styles.title}>Leave a request for free departure of the measurer</div>
+      <div className={styles.title}>Add your favourite destination!</div>
       <div className={styles.data}>
         <div className={styles.name}>
           <label className={styles.label} htmlFor="name2">
-            Name
+            Destination
           </label>
           <input
             className={styles.input}
@@ -16,38 +16,37 @@ const Form = () => {
             name="name2"
             id="name2"
             required
-            placeholder="What is your name:"
+            placeholder="Destination:"
           />
         </div>
-        <div className={styles.phone}>
-          <label className={styles.label} htmlFor="phone2">
-            Phone
+        <div className={styles.link}>
+          <label className={styles.label} htmlFor="link">
+            Image link
           </label>
           <input
             className={styles.input}
-            type="tel"
-            name="phone2"
-            id="phone2"
+            type="link"
+            name="link"
+            id="link"
+            placeholder="Url:"
             required
-            pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
-            placeholder="Your phone number:"
           />
         </div>
-        <div className={styles.email}>
-          <label className={styles.label} htmlFor="email">
-            Email
+        <div className={styles.textarea}>
+          <label className={styles.label} htmlFor="textarea">
+            Brief description of the destination
           </label>
           <input
-            className={styles.input}
-            type="email"
-            name="email"
-            id="email"
+            className={styles.textarea}
+            type="textarea"
+            name="textarea"
+            id="textarea"
             required
-            placeholder="Your email"
           />
         </div>
+
         <div className={styles.submit}>
-          <input type="submit" name="submit" placeholder="submit" />
+          <input type="submit" name="submit" value="submit" />
         </div>
       </div>
     </form>

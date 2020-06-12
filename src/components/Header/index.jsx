@@ -10,7 +10,7 @@ const Header = () => {
         <Icon />
         <h3 className={styles.title}>travelly</h3>
       </div>
-      <Menu />
+      <Menu isHeader />
     </header>
   );
 };

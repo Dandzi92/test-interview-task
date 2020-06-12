@@ -1,0 +1,70 @@
+.container {
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  font-size: 52px;
+  letter-spacing: 2px;
+  color: #323232;
+  font-family: 'Open-Sans', serif;
+  font-weight: 300;
+  text-transform: capitalize;
+}
+
+.items {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+  max-width: 1000px;
+  width: 100%;
+  align-self: center;
+}
+
+.proposal {
+  font-size: 16px;
+  color: #323232;
+  font-family: 'Montserrat', serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-top: 80px;
+  align-self: center;
+}
+
+.subscription {
+  display: flex;
+  margin-top: 20px;
+  align-self: center;
+  max-width: 500px;
+  width: 100%;
+  & input {
+    max-width: 326px;
+    width: 100%;
+    height: 40px;
+    background-color: #eeeeee;
+    font-size: 16px;
+    letter-spacing: 1px;
+    color: #8b8b8b;
+    font-family: 'Open-Sans', serif;
+    font-weight: 400;
+    padding: 15px;
+    outline: none;
+    border: none;
+    text-transform: capitalize;
+  }
+  button {
+    max-width: 152px;
+    width: 100%;
+    height: 40px;
+    background-color: #fd4f32;
+    outline: none;
+    border: none;
+    font-size: 16px;
+    letter-spacing: 1px;
+    color: #ffffff;
+    font-family: 'Open-Sans';
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+}
