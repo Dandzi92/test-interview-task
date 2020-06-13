@@ -1,20 +1,20 @@
 .menu {
   display: flex;
   list-style-type: none;
-  max-width: 240px;
-  flex-basis: 100%;
   justify-content: space-between;
 }
 
 .menu li {
   display: flex;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 0.875rem;
   color: #323232;
   align-items: flex-start;
   text-transform: uppercase;
   font-family: 'Montserrat', serif;
   font-weight: 500;
+  padding: 0.625rem;
+  cursor: pointer;
 }
 
 .header-li {

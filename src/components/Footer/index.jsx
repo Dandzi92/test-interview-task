@@ -6,7 +6,8 @@ const Footer = () => {
   return (
     <footer className={styles.footer}>
       <div className={styles['copy-right']}>
-        Copyright © 2014 Travelly. All Rights Reserved. Designed for Despreneur.
+        Copyright © 2014 Travelly.
+        <span className={styles.desktop}>All Rights Reserved.Designed for Despreneur.</span>
       </div>
       <Menu />
     </footer>

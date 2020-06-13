@@ -1,12 +1,15 @@
 .container {
-  padding: 50px;
+  padding: 3.125rem;
   display: flex;
   flex-direction: column;
 }
 
 .title {
-  font-size: 52px;
-  letter-spacing: 2px;
+  @media (max-width: 1000px) {
+    align-self: center;
+  }
+  font-size: 3.25rem;
+  letter-spacing: 0.125rem;
   color: #323232;
   font-family: 'Open-Sans', serif;
   font-weight: 300;
@@ -14,6 +17,11 @@
 }
 
 .items {
+  @media (max-width: 1000px) {
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
   display: flex;
   justify-content: space-between;
   margin-top: 30px;
@@ -23,12 +31,12 @@
 }
 
 .proposal {
-  font-size: 16px;
+  font-size: 1rem;
   color: #323232;
   font-family: 'Montserrat', serif;
   font-weight: 700;
   text-transform: uppercase;
-  margin-top: 80px;
+  margin-top: 5rem;
   align-self: center;
 }
 
@@ -41,14 +49,14 @@
   & input {
     max-width: 326px;
     width: 100%;
-    height: 40px;
+    height: 2.5rem;
     background-color: #eeeeee;
-    font-size: 16px;
+    font-size: 1rem;
     letter-spacing: 1px;
     color: #8b8b8b;
     font-family: 'Open-Sans', serif;
     font-weight: 400;
-    padding: 15px;
+    padding: 0.9375rem;
     outline: none;
     border: none;
     text-transform: capitalize;
@@ -56,12 +64,12 @@
   button {
     max-width: 152px;
     width: 100%;
-    height: 40px;
+    height: 2.5rem;
     background-color: #fd4f32;
     outline: none;
     border: none;
-    font-size: 16px;
-    letter-spacing: 1px;
+    font-size: 1rem;
+    letter-spacing: 0.0625rem;
     color: #ffffff;
     font-family: 'Open-Sans';
     font-weight: 700;
