@@ -3,7 +3,7 @@ import destinationsApi from './destinationsApi';
 
 export function apiFactory(http) {
   return {
-    ideas: destinationsApi(http),
+    destinations: destinationsApi(http),
   };
 }
 

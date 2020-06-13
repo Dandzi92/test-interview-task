@@ -23,6 +23,16 @@ export const destinationsFeature = createSlice({
         state.destinations = action.payload;
       }
     },
+    addDestinationRequest: state => {
+      state.loading = true;
+    },
+    addDestinationSuccess: (state, { payload }) => {
+      state.destinations.push(payload);
+    },
+    addDestinationFail: (state, action) => {
+      state.loading = false;
+      state.errors.push(action.payload);
+    },
   },
 });
 
@@ -30,6 +40,9 @@ export const {
   fetchDestinationsRequest,
   fetchDestinationsSuccess,
   fetchDestinationsFail,
+  addDestinationRequest,
+  addDestinationSuccess,
+  addDestinationFail,
 } = destinationsFeature.actions;
 export default destinationsFeature.reducer;
 
@@ -41,7 +54,16 @@ function* fetchDestinationsWorker() {
     yield put(fetchDestinationsFail(e.message));
   }
 }
+function* addDestinationsWorker({ payload }) {
+  try {
+    const response = yield call(api.destinations.create, payload);
+    yield put(fetchDestinationsSuccess(response.data));
+  } catch (e) {
+    yield put(addDestinationFail(e.message));
+  }
+}
 
 export function* destinationsSaga() {
   yield takeEvery(fetchDestinationsRequest().type, fetchDestinationsWorker);
+  yield takeEvery(addDestinationRequest().type, addDestinationsWorker);
 }
