@@ -2,6 +2,7 @@ import React from 'react';
 import Icon from '../Icon';
 import Menu from '../Menu';
 import styles from './styles.module.scss';
+import HeaderMenu from './HeaderMenu';
 
 const Header = () => {
   return (
@@ -10,7 +11,7 @@ const Header = () => {
         <Icon />
         <h3 className={styles.title}>travelly</h3>
       </div>
-      <Menu isHeader />
+      <HeaderMenu />
     </header>
   );
 };

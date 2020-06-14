@@ -5,8 +5,9 @@ import classnames from 'classnames';
 const Menu = ({ isHeader }) => {
   return (
     <ul
-      className={classnames(styles.menu, {
-        [styles['header-li']]: isHeader,
+      className={classnames({
+        [styles['menu']]: !isHeader,
+        [styles['menu-header']]: isHeader,
       })}
     >
       <li>home</li>

@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import svgSprite from '../../assets/images/svgSprite.svg';
 import styles from './styles.module.scss';
 
-const Icon = ({ icon, size }) => (
-  <svg className={styles[`${size}`]}>
+const Icon = ({ icon, size, handler }) => (
+  <svg className={styles[`${size}`]} onClick={handler}>
     <use xlinkHref={`${svgSprite}#${icon}`} />
   </svg>
 );
