@@ -1,6 +1,7 @@
 import React from 'react';
-import styles from './styles.module.scss';
+import PropTypes from 'prop-types';
 import classnames from 'classnames';
+import styles from './styles.module.scss';
 
 const Menu = ({ isHeader }) => {
   return (
@@ -16,6 +17,10 @@ const Menu = ({ isHeader }) => {
       <li>contact</li>
     </ul>
   );
+};
+
+Menu.propTypes = {
+  isHeader: PropTypes.bool,
 };
 
 export default Menu;

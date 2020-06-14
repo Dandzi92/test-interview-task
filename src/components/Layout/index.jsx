@@ -1,16 +1,20 @@
 import React from 'react';
 import Header from '../Header';
 import Footer from '../Footer';
-import styles from './styles.scss';
+import PropTypes from 'prop-types';
 
 const Layout = ({ children }) => {
   return (
-    <div className={styles.wrapper}>
+    <>
       <Header />
       {children}
       <Footer />
-    </div>
+    </>
   );
+};
+
+Layout.propTypes = {
+  children: PropTypes.node.isRequired,
 };
 
 export default Layout;

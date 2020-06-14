@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styles from './styles.module.scss';
 
 const SliderItem = ({ src, title, description }) => {
@@ -11,6 +12,12 @@ const SliderItem = ({ src, title, description }) => {
       </div>
     </div>
   );
+};
+
+SliderItem.propTypes = {
+  src: PropTypes.string,
+  title: PropTypes.string,
+  description: PropTypes.string,
 };
 
 export default SliderItem;

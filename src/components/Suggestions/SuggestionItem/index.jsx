@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styles from './styles.module.scss';
 
 const SuggestionItem = ({ title }) => {
@@ -11,6 +12,10 @@ const SuggestionItem = ({ title }) => {
       </div>
     </div>
   );
+};
+
+SuggestionItem.propTypes = {
+  title: PropTypes.string,
 };
 
 export default SuggestionItem;

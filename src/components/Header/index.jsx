@@ -1,6 +1,5 @@
 import React from 'react';
 import Icon from '../Icon';
-import Menu from '../Menu';
 import styles from './styles.module.scss';
 import HeaderMenu from './HeaderMenu';
 
