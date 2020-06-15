@@ -2,11 +2,13 @@ import React, { useEffect, useState } from 'react';
 import './styles.scss';
 import SliderItem from './SliderItem';
 
-const Slider = () => {
+const Slider = ({ data }) => {
   const arr = [0, 1, 2, 3];
-
-  const [products, setProducts] = useState(arr);
-  const [productIndex, setProductIndex] = useState(Math.floor(arr.length / 2));
+  useEffect(() => {
+    setProductIndex(Math.floor(data.length / 2));
+  }, [data]);
+  const [productIndex, setProductIndex] = useState(Math.floor(data.length / 2));
+  console.log(productIndex);
   const nextProduct = () => {
     setProductIndex(productIndex + 1);
   };
@@ -15,23 +17,22 @@ const Slider = () => {
   };
   return (
     <div className={'slider'}>
-      {arr.map((item, i) => (
-        <SliderItem
-          key={i}
-          src={
-            'https://images.pexels.com/photos/814499/pexels-photo-814499.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'
-          }
-          title={i + 'Good place for your rest'}
-          description={'The best choice for everyone, who want to spend their free time'}
-          translate={
-            i === productIndex
-              ? '-50%'
-              : i < productIndex
-              ? `${-50 + (i - productIndex) * 120}%`
-              : `${-50 - (productIndex - i) * 120}%`
-          }
-        />
-      ))}
+      {data &&
+        data.map(({ id, destination, description, link }, i) => (
+          <SliderItem
+            key={id}
+            src={link}
+            title={destination}
+            description={description}
+            translate={
+              i === productIndex
+                ? '-50%'
+                : i < productIndex
+                ? `${-50 + (i - productIndex) * 120}%`
+                : `${-50 - (productIndex - i) * 120}%`
+            }
+          />
+        ))}
       <button
         style={{ left: '10px', top: '10px' }}
         className={'controls'}
@@ -43,7 +44,7 @@ const Slider = () => {
       <button
         style={{ right: '10px', top: '10px' }}
         className={'controls'}
-        disabled={productIndex === arr.length - 1}
+        disabled={productIndex === data.length - 1}
         onClick={nextProduct}
       >
         right
