@@ -1,12 +1,16 @@
 import React from 'react';
 import classNames from 'classnames';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { useFormik } from 'formik';
 import { formValidate } from '../../utils/formValidate';
 import styles from './styles.module.scss';
 import { addDestinationRequest } from '../../features/destinations';
 
 const Form = () => {
+  const { loading, alertMessage } = useSelector(state => ({
+    loading: state.destinations.loading,
+    alertMessage: state.destinations.alertMessage,
+  }));
   const dispatch = useDispatch();
   const formik = useFormik({
     initialValues: {
@@ -17,10 +21,16 @@ const Form = () => {
     validate: formValidate,
     onSubmit: values => {
       dispatch(addDestinationRequest(values));
+      formik.resetForm();
     },
   });
   return (
     <form className={styles.form} action="#" method="post" onSubmit={formik.handleSubmit}>
+      {alertMessage && (
+        <div className={styles.alert}>
+          {alertMessage === 'Submission success!' ? 'Submission success!' : 'Submission failure!'}
+        </div>
+      )}
       <div className={styles.title}>Add your favourite destination!</div>
       <div className={styles.data}>
         <div className={styles.name}>
@@ -85,7 +95,7 @@ const Form = () => {
         </div>
 
         <div className={styles.submit}>
-          <input type="submit" name="submit" value="submit" />
+          <input type="submit" name="submit" value={!loading ? 'submit' : '...processing'} />
         </div>
       </div>
     </form>
