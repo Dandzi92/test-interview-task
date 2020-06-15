@@ -5,6 +5,12 @@
 }
 
 .menu-header {
+  @media (max-width: 1100px) {
+    max-width: 250px;
+  }
+  @media (max-width: 600px) {
+    max-width: 150px;
+  }
   display: block;
   position: fixed;
   visibility: hidden;

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import './styles.scss';
+import styles from './styles.module.scss';
 import SliderItem from './SliderItem';
 
 const Slider = ({ data }) => {
@@ -14,7 +14,7 @@ const Slider = ({ data }) => {
     setCardIndex(cardIndex - 1);
   };
   return (
-    <div className={'slider'}>
+    <div className={styles['slider']}>
       {data &&
         data.map(({ id, destination, description, link }, i) => (
           <SliderItem
@@ -33,7 +33,7 @@ const Slider = ({ data }) => {
         ))}
       <button
         style={{ left: '10px', top: '10px' }}
-        className={'controls'}
+        className={styles['controls']}
         disabled={cardIndex === 0}
         onClick={prevCard}
       >
@@ -41,7 +41,7 @@ const Slider = ({ data }) => {
       </button>
       <button
         style={{ right: '10px', top: '10px' }}
-        className={'controls'}
+        className={styles['controls']}
         disabled={cardIndex === data.length - 1}
         onClick={nextCard}
       >
