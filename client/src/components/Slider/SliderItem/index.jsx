@@ -1,14 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styles from './styles.module.scss';
+import './styles.scss';
 
-const SliderItem = ({ src, title, description }) => {
+const SliderItem = ({ src, title, description, translate }) => {
+  const style = { transform: `translate(${translate}, -50%)` };
   return (
-    <div className={styles.container}>
-      <img className={styles.avatar} src={src} alt="landscape" />
-      <div className={styles.details}>
-        <h5 className={styles.title}>{title}</h5>
-        <div className={styles.description}>{description}</div>
+    <div className={'container'} style={style}>
+      <img className={'avatar'} src={src} alt="landscape" />
+      <div className={'details'}>
+        <h5 className={'title'}>{title}</h5>
+        <div className={'description'}>{description}</div>
       </div>
     </div>
   );
