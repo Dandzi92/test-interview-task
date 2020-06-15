@@ -7,11 +7,7 @@ const Slider = () => {
 
   const [products, setProducts] = useState(arr);
   const [productIndex, setProductIndex] = useState(Math.floor(arr.length / 2));
-  console.log('productIndex', productIndex);
   const nextProduct = () => {
-    // const lastProductIndex = products.length - 1;
-    // const resetProductIndex = productIndex === lastProductIndex;
-    // const index = resetProductIndex ? 0 : productIndex + 1;
     setProductIndex(productIndex + 1);
   };
   const prevProduct = () => {
@@ -36,10 +32,20 @@ const Slider = () => {
           }
         />
       ))}
-      <button disabled={productIndex === 0} onClick={prevProduct}>
+      <button
+        style={{ left: '10px', top: '10px' }}
+        className={'controls'}
+        disabled={productIndex === 0}
+        onClick={prevProduct}
+      >
         left
       </button>
-      <button disabled={productIndex === arr.length - 1} onClick={nextProduct}>
+      <button
+        style={{ right: '10px', top: '10px' }}
+        className={'controls'}
+        disabled={productIndex === arr.length - 1}
+        onClick={nextProduct}
+      >
         right
       </button>
     </div>
