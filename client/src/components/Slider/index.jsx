@@ -3,17 +3,15 @@ import './styles.scss';
 import SliderItem from './SliderItem';
 
 const Slider = ({ data }) => {
-  const arr = [0, 1, 2, 3];
   useEffect(() => {
-    setProductIndex(Math.floor(data.length / 2));
+    setCardIndex(Math.floor(data.length / 2));
   }, [data]);
-  const [productIndex, setProductIndex] = useState(Math.floor(data.length / 2));
-  console.log(productIndex);
-  const nextProduct = () => {
-    setProductIndex(productIndex + 1);
+  const [cardIndex, setCardIndex] = useState(Math.floor(data.length / 2));
+  const nextCard = () => {
+    setCardIndex(cardIndex + 1);
   };
-  const prevProduct = () => {
-    setProductIndex(productIndex - 1);
+  const prevCard = () => {
+    setCardIndex(cardIndex - 1);
   };
   return (
     <div className={'slider'}>
@@ -25,27 +23,27 @@ const Slider = ({ data }) => {
             title={destination}
             description={description}
             translate={
-              i === productIndex
+              i === cardIndex
                 ? '-50%'
-                : i < productIndex
-                ? `${-50 + (i - productIndex) * 120}%`
-                : `${-50 - (productIndex - i) * 120}%`
+                : i < cardIndex
+                ? `${-50 + (i - cardIndex) * 120}%`
+                : `${-50 - (cardIndex - i) * 120}%`
             }
           />
         ))}
       <button
         style={{ left: '10px', top: '10px' }}
         className={'controls'}
-        disabled={productIndex === 0}
-        onClick={prevProduct}
+        disabled={cardIndex === 0}
+        onClick={prevCard}
       >
         left
       </button>
       <button
         style={{ right: '10px', top: '10px' }}
         className={'controls'}
-        disabled={productIndex === data.length - 1}
-        onClick={nextProduct}
+        disabled={cardIndex === data.length - 1}
+        onClick={nextCard}
       >
         right
       </button>
