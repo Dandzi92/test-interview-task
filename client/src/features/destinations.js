@@ -5,7 +5,6 @@ import { api } from '../api';
 export const destinationsFeature = createSlice({
   name: 'destinations',
   initialState: {
-    loading: false,
     destinations: [],
     errors: [],
     loading: false,
